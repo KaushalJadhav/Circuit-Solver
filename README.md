@@ -7,4 +7,4 @@ A project based on solving voltages and currents using graph theory.Circuits rep
 <H2> Instructions for writing the input- </H2>
 <ul> 
 <li> Sequence to be followed - [Branch source node, Branch destination node, Resistance in branch,Capacitance in branch,Inductance in branch,Associated voltage source,Associated current source ] </li>
-<li> While writing voltages and currents maintain the following format- magnitude,frequency&ltangle
+<li> While writing voltages and currents maintain the following format- magnitude,frequency&ltangle(in degrees)
