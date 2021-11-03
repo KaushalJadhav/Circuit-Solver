@@ -14,6 +14,7 @@ def check_float(string):
 
 conv_dict={
            'T':1e12,
+           't':1e12
            'G':1e9,
            'g':1e9,
            'M':1e6,
