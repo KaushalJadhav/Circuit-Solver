@@ -3,11 +3,14 @@ from laplace import LT
 from graph import graph,branch
 from matrix import matrices,reorder
 from final_calc import calculate,calculate_partial_fractions
+from arg import get_args
 import numpy as np
-np.set_printoptions(linewidth=np.inf)
 from sympy.matrices import Matrix
-def run_solver():
-    R_list,C_list,L_list,V_list,I_list,branch_src_list,branch_dest_list=from_txt('test_data_2.txt')
+
+np.set_printoptions(linewidth=np.inf)
+
+def run_solver(file_name):
+    R_list,C_list,L_list,V_list,I_list,branch_src_list,branch_dest_list=from_txt(file_name)
     g=graph()
     g.generate(branch_src_list,branch_dest_list)
     g.generate_matrix()
@@ -23,4 +26,5 @@ def run_solver():
     return V,I 
 
 if __name__ == '__main__':
-    V,I=run_solver()
+    arg=get_args()
+    V,I=run_solver(arg.file_name)
