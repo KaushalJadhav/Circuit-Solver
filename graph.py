@@ -106,7 +106,6 @@ class graph:
     def get_loops(self):
         links=self.get_links()
         tree=self.maintain_tree(reverse=True)
-        # print(tree)
         list=[]
         for l in links:
             loop=[]
@@ -131,16 +130,3 @@ class graph:
              loop=sorted(loop,key=itemgetter(0,1))
              list.append(loop)
         return list
-
-            
-
-# l1=[1,2,3,3,1,1]
-# l2=[2,3,4,1,3,4]
-# g=graph()
-# g.generate(l1,l2)
-# g.generate_matrix()
-# g.generate_tree()
-# links=g.get_links()
-# loops=g.get_loops()
-# print(np.nonzero(g.generate_matrix()))
-#print(g.nodes)

@@ -89,7 +89,6 @@ def convert_VI(data,list):
                  res.append(V_I.replace(str(res[0]),''))
              else:
                  res=['-']
-            #  print(res)
              if len(res)==1:
                  val=0
              elif len(res)==2:

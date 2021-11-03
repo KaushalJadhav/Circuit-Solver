@@ -20,3 +20,6 @@ def calculate(B,Q,Z,Y,Vg,Ig,n):
     Vt=(Yf**-1)*J
     V=Qf.T*Vt
     return V,I
+
+def calculate_partial_fractions(exp):
+    return sp.apart(exp)

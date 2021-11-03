@@ -39,31 +39,17 @@ def create_list(src,g,list):
                 l.append(list[c])
                 del src[c]
                 del list[c]
-                # print(R_list)
                 break
     return l
 
 
 def RLCVI(src,g,R_list,L_list,C_list,V_list,I_list):
     # RLC lists modified according to dest
-    # R_list=R_list.tolist()
-    # C_list=C_list.tolist()
-    # L_list=L_list.tolist()
-    # V_list=V_list.tolist()
-    # I_list=I_list.tolist()
-    # print(R_list)
-    # print(C_list)
-    # print(L_list)
     R=create_list(src,g,R_list)
     L=create_list(src,g,L_list)
     C=create_list(src,g,C_list)
     V=create_list(src,g,V_list)
     I=create_list(src,g,I_list)
-    # R=Matrix(R)
-    # L=Matrix(L)
-    # C=Matrix(C)
-    # V=Matrix(V)
-    # I=Matrix(I)
     return R,L,C,V,I
 
 def reorder(g,R_list,C_list,L_list,V_list,I_list,branch_src_list,branch_dest_list):
