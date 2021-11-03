@@ -4,11 +4,15 @@ A project based on solving voltages and currents using graph theory.Circuits rep
 <br>
 <H2> Installation instructions- </H2>
 <H3> With pip </H3>
-<ul> 
-<li> Install dependencies using pip: `pip install -r requirements.txt` </li>
-</ul>
+  <ul> 
+    <li> Install dependencies using pip: `pip install -r requirements.txt` 
+    </li>
+  </ul>
 <H3> Usage </H3>
-Run [``run.py``](https://github.com/KaushalJadhav/Circuit-Solver/blob/main/run.py)
+  <ul>
+    <li> Run run.py
+    </li> 
+  </ul>
 <H2> Instructions for writing the input- </H2>
 <ul> 
 <li> Sequence to be followed - [Branch source node, Branch destination node, Resistance in branch,Capacitance in branch,Inductance in branch,Associated voltage source,Associated current source ] </li>
