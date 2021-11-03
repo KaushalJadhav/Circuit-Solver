@@ -5,7 +5,7 @@ A project based on solving voltages and currents using graph theory.Circuits rep
 <H2> Installation instructions- </H2>
 <H3> With pip </H3>
   <ul> 
-    <li> Install dependencies using pip: `pip install -r requirements.txt` 
+    <li> Install dependencies using pip: pip install -r requirements.txt 
     </li>
   </ul>
 <H3> Usage </H3>
