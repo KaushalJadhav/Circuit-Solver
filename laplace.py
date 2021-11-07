@@ -1,6 +1,8 @@
 import sympy as sp
 import numpy as np
 from sympy.matrices import Matrix
+from sympy.core.rules import Transform
+from sympy import Float
 s=sp.Symbol('s')
 
 def calculate_LT_(V_I):
@@ -44,4 +46,14 @@ def LT(R_list,C_list,L_list,V_list,I_list,branch_src_list,branch_dest_list):
     L_mat=calculate_L(L_list)
     V_mat=calculate_VI(V_list)
     I_mat=calculate_VI(I_list)
+    temp1=[]
+    temp2=[]
+    for V in V_mat:
+        temp1.append(V.xreplace(Transform(lambda x: x.round(2), lambda x: isinstance(x,Float))))
+    for I in I_mat:
+        temp2.append(I.xreplace(Transform(lambda x: x.round(2), lambda x: isinstance(x,Float))))
+    I_mat=Matrix(temp2)
+    V_mat=Matrix(temp1)
+    del temp1
+    del temp2
     return R_mat,C_mat,L_mat,V_mat,I_mat
