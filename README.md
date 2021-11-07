@@ -24,5 +24,5 @@ A project based on solving voltages and currents using graph theory.Circuits are
 <li> Input is parsed based on space seperation. 
 </ul>
 
-<H3> What is remaining-
+<H3> What is remaining- </H3>
 <ul> <li> argument parsing 
