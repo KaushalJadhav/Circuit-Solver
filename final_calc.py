@@ -5,9 +5,16 @@ import warnings
 from functools import reduce
 
 from sympy.tensor.functions import shape
+
+'''
+To  ignore deprecation warning 
+'''
 warnings.filterwarnings("ignore", category=DeprecationWarning) 
 
 def getMatrixMinor(m,i,j):
+'''
+Returns minor of i,jth element of matrix m
+'''
     return m.minor_submatrix(i,j)
 
 def det(m):
