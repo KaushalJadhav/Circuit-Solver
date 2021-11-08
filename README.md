@@ -19,7 +19,7 @@ A project based on solving voltages and currents using graph theory.Circuits are
 <H2> Instructions for writing the input- </H2>
 <ul> 
 <li> Sequence to be followed - [Branch source node, Branch destination node, Resistance in branch,Capacitance in branch,Inductance in branch,Associated voltage source,Associated current source ] </li>
-<li> While writing voltages and currents maintain the following format- magnitude,frequency&ltangle(in degrees)
+<li> While writing voltages and currents maintain the format asspecified in conversions.txt.
 <li> Units- <br> For accepted units and abbrevation- see conversions.txt. <br>Note- The units like Ohm, Volts, Amperes should be omitted while providing the input.
 <li> Input is parsed based on space seperation. 
 </ul>
