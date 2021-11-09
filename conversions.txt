@@ -31,3 +31,4 @@ Examples and instructions-
    a. [magnitude] (for DC)
    b. [magnitude],[frequency] or
    c. [magnitude],[frequency]<[angle] (for AC)
+   d. Sinusoidal signals ( only sine wave) are allowed
