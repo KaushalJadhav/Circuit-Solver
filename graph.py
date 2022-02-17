@@ -1,5 +1,6 @@
 from operator import itemgetter
 import numpy as np 
+
 class branch:
     def __init__(self,src,dest,forced=False):
         if forced:
@@ -135,15 +136,3 @@ class graph:
              list.append(loop)
         return list
 
-            
-
-# l1=[1,2,3,3,1,1]
-# l2=[2,3,4,1,3,4]
-# g=graph()
-# g.generate(l1,l2)
-# g.generate_matrix()
-# g.generate_tree()
-# links=g.get_links()
-# loops=g.get_loops()
-# print(np.nonzero(g.generate_matrix()))
-#print(g.nodes)

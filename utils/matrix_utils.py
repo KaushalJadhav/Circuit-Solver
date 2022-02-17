@@ -3,8 +3,8 @@ import numpy as np
 from sympy.matrices import Matrix
 import warnings
 from functools import reduce
-
 from sympy.tensor.functions import shape
+
 warnings.filterwarnings("ignore", category=DeprecationWarning) 
 
 def getMatrixMinor(m,i,j):
@@ -32,28 +32,3 @@ def inv(m):
     mat=mat/d
     return mat
 
-def calculate(B,Q,Z,Y,Vg,Ig,n):
-    s=sp.Symbol('s')
-    Vg=Matrix(Vg)
-    Vgt=Matrix(Vg[0:n])
-    Vgl=Matrix(Vg[n:])
-    Ig=Matrix(Ig)
-    Igt=Matrix(Ig[0:n])
-    Igl=Matrix(Ig[n:])
-    Bf=Matrix(B)
-    Qf=Matrix(Q)
-    Zf=Bf*Z*Bf.T
-    E=Bf*(Vg+Z*Bf.T*Igl-Z*Ig)
-    if Zf.shape[0]>2: 
-        Il=(inv(Zf))*E
-    else:
-        Il=(Zf.inv('ADJ'))*E
-    I=Bf.T*Il
-    Yf=Qf*Y*Qf.T
-    J=Qf*(Ig+Y*Qf.T*Vgt-Y*Vg)
-    if Yf.shape[0]>2:
-        Vt=(inv(Yf))*J
-    else:
-        Vt=(Yf.inv('ADJ'))*J
-    V=Qf.T*Vt
-    return V,I

@@ -13,6 +13,7 @@ def calculate_LT_(V_I):
         w=np.round_(w,5)
         a=np.pi*V_I[2]/180
         return (V_I[0]*(w*np.round_(np.cos(a),5)+s*np.round_(np.sin(a),5))/(s**2+w**2))
+
 def calculate_VI(V_I):
     mat=Matrix(np.zeros(len(V_I)))
     for i in range(len(V_I)):
@@ -54,6 +55,4 @@ def LT(R_list,C_list,L_list,V_list,I_list,branch_src_list,branch_dest_list):
         temp2.append(I.xreplace(Transform(lambda x: x.round(4), lambda x: isinstance(x,Float))))
     I_mat=Matrix(temp2)
     V_mat=Matrix(temp1)
-    del temp1
-    del temp2
     return R_mat,C_mat,L_mat,V_mat,I_mat

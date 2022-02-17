@@ -1,11 +1,11 @@
-from input import from_txt
-from laplace import LT
-from graph import graph,branch
-from matrix import matrices,reorder
-from final_calc import calculate
 import numpy as np
-np.set_printoptions(linewidth=np.inf)
 import sympy as sp
+from calc import calculate,matrices
+from graph import graph,branch 
+from utils.laplace import LT
+from utils.utils import reorder,get_args,from_txt
+
+np.set_printoptions(linewidth=np.inf)
 
 def run_solver(filename):
  t=sp.Symbol('t')
@@ -25,4 +25,5 @@ def run_solver(filename):
  return V,I
 
 if __name__=="__main__":
-    run_solver('test_data.txt')
+    args = get_args()
+    run_solver(args.file_name())
