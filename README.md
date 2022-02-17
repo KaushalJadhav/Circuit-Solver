@@ -23,6 +23,3 @@ A project based on solving voltages and currents using graph theory.Circuits are
 <li> Units- <br> For accepted units and abbrevation- see conversions.txt. <br>Note- The units like Ohm, Volts, Amperes should be omitted while providing the input.
 <li> Input is parsed based on space seperation. 
 </ul>
-
-<H3> What is remaining- </H3>
-<ul> <li> argument parsing 
